@@ -40,7 +40,6 @@ No installation required! Simply:
 2. Open `index.html` in your browser
 3. Start writing Markdown
 
-Or visit the [live demo](#) to use it directly from your browser.
 
 ## Deployment
 
