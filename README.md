@@ -2,7 +2,7 @@
 
 A lightweight, responsive Markdown editor with live preview functionality.
 
-![Markdown Live Editor](https://via.placeholder.com/800x400?text=Markdown+Live+Editor)
+![Markdown Live Editor](preview.png)
 
 ## Features
 
