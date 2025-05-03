@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Live Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-code"></i>
+            <h1>Markdown Live Editor</h1>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="editor-container">
+                <div class="editor-header">
+                    <h2>Markdown</h2>
+                    <div class="editor-actions">
+                        <button id="copy-markdown" title="Copy Markdown">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <button id="clear-markdown" title="Clear Editor">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <textarea id="markdown-input" placeholder="Type your Markdown here..."></textarea>
+            </div>
+            
+            <div class="preview-container">
+                <div class="preview-header">
+                    <h2>Preview</h2>
+                    <div class="preview-actions">
+                        <button id="copy-html" title="Copy HTML">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <button id="download-html" title="Download HTML">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="preview"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cheatsheet-toggle">
+        <button id="toggle-cheatsheet">
+            <i class="fa-solid fa-circle-info"></i> Markdown Cheatsheet
+        </button>
+    </div>
+
+    <div class="cheatsheet-modal" id="cheatsheet-modal">
+        <div class="cheatsheet-content">
+            <div class="cheatsheet-header">
+                <h2>Markdown Cheatsheet</h2>
+                <button id="close-cheatsheet">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="cheatsheet-body">
+                <div class="cheatsheet-section">
+                    <h3>Headers</h3>
+                    <pre><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Emphasis</h3>
+                    <pre><code>*italic* or _italic_
+**bold** or __bold__
+**_bold italic_** or ***bold italic***
+~~strikethrough~~</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Lists</h3>
+                    <pre><code>1. Ordered item
+2. Ordered item
+   
+- Unordered item
+- Unordered item
+
+- [ ] Task
+- [x] Completed task</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Links & Images</h3>
+                    <pre><code>[Link text](https://example.com)
+![Alt text](image-url.jpg)</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Code</h3>
+                    <pre><code>`inline code`
+
+```
+code block
+```
+
+```javascript
+// syntax highlighted
+let x = 10;
+```</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Blockquotes</h3>
+                    <pre><code>> This is a blockquote
+>> Nested blockquote</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Tables</h3>
+                    <pre><code>| Header | Header |
+| ------ | ------ |
+| Cell   | Cell   |
+| Cell   | Cell   |</code></pre>
+                </div>
+                <div class="cheatsheet-section">
+                    <h3>Horizontal Rule</h3>
+                    <pre><code>---</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with <i class="fa-solid fa-heart"></i> by a developer for developers</p>
+        <p>Fork me on <a href="https://github.com" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
