@@ -18,7 +18,6 @@ A lightweight, responsive Markdown editor with live preview functionality.
 
 ## Demo
 
-You can see a live demo [here](#) (replace with your GitHub Pages URL when deployed).
 
 ## Usage
 
